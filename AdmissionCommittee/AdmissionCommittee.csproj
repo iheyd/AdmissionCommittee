@@ -192,6 +192,42 @@
     <ItemGroup>
         <None Include="App.config" />
     </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="Images\Background.png" />
+      <EmbeddedResource Include="Images\Clear.png" />
+      <EmbeddedResource Include="Images\ClearLight.png" />
+      <EmbeddedResource Include="Images\Home.png" />
+      <EmbeddedResource Include="Images\HomeLight.png" />
+      <EmbeddedResource Include="Images\HomeUserControl.png" />
+      <EmbeddedResource Include="Images\icon.ico" />
+      <EmbeddedResource Include="Images\Rating.png" />
+      <EmbeddedResource Include="Images\Rating1.png" />
+      <EmbeddedResource Include="Images\Rating1Light.png" />
+      <EmbeddedResource Include="Images\Rating2.png" />
+      <EmbeddedResource Include="Images\Rating2Light.png" />
+      <EmbeddedResource Include="Images\Rating3.png" />
+      <EmbeddedResource Include="Images\Rating3Light.png" />
+      <EmbeddedResource Include="Images\RatingLight.png" />
+      <EmbeddedResource Include="Images\Reboot.png" />
+      <EmbeddedResource Include="Images\RebootLight.png" />
+      <EmbeddedResource Include="Images\Request.png" />
+      <EmbeddedResource Include="Images\Request1.png" />
+      <EmbeddedResource Include="Images\Request1Light.png" />
+      <EmbeddedResource Include="Images\Request1UserControl.png" />
+      <EmbeddedResource Include="Images\Request2.png" />
+      <EmbeddedResource Include="Images\Request2Light.png" />
+      <EmbeddedResource Include="Images\RequestLight.png" />
+      <EmbeddedResource Include="Images\Save.png" />
+      <EmbeddedResource Include="Images\SaveLight.png" />
+      <EmbeddedResource Include="Images\Wrap.png" />
+      <EmbeddedResource Include="Images\Wrap1.png" />
+      <EmbeddedResource Include="Images\Wrap1Light.png" />
+      <EmbeddedResource Include="Images\Wrap2.png" />
+      <EmbeddedResource Include="Images\Wrap2Light.png" />
+      <EmbeddedResource Include="Images\Wrap3.png" />
+      <EmbeddedResource Include="Images\Wrap3Light.png" />
+      <EmbeddedResource Include="Images\wrapBackground.png" />
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -11,41 +11,41 @@ public partial class Request1UserControl : UserControl
     public Request1UserControl()
     {
         InitializeComponent();
-        wrap1.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Wrap1.png"));
-        wrap2.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Wrap2.png"));
-        wrap3.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Wrap3.png"));
-        saveButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Save.png"));
-        clearButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Clear.png"));
+        wrap1.Image = MainForm.ResourceLoader.LoadImageFromResources("Wrap1.png");
+        wrap2.Image = MainForm.ResourceLoader.LoadImageFromResources("Wrap2.png");
+        wrap3.Image = MainForm.ResourceLoader.LoadImageFromResources("Wrap3.png");
+        saveButton.Image = MainForm.ResourceLoader.LoadImageFromResources("Save.png");
+        clearButton.Image = MainForm.ResourceLoader.LoadImageFromResources("Clear.png");
     }
 
     private void wrap1_MouseEnter(object sender, EventArgs e)
     {
-        wrap1.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Wrap1Light.png"));
+        wrap1.Image = MainForm.ResourceLoader.LoadImageFromResources("Wrap1Light.png");
     }
 
     private void wrap1_MouseLeave(object sender, EventArgs e)
     {
-        wrap1.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Wrap1.png"));
+        wrap1.Image = MainForm.ResourceLoader.LoadImageFromResources("Wrap1.png");
     }
 
     private void wrap2_MouseEnter(object sender, EventArgs e)
     {
-        wrap2.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Wrap2Light.png"));
+        wrap2.Image = MainForm.ResourceLoader.LoadImageFromResources("Wrap2Light.png");
     }
 
     private void wrap2_MouseLeave(object sender, EventArgs e)
     {
-        wrap2.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Wrap2.png"));
+        wrap2.Image = MainForm.ResourceLoader.LoadImageFromResources("Wrap2.png");
     }
 
     private void wrap3_MouseEnter(object sender, EventArgs e)
     {
-        wrap3.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Wrap3Light.png"));
+        wrap3.Image = MainForm.ResourceLoader.LoadImageFromResources("Wrap3Light.png");
     }
 
     private void wrap3_MouseLeave(object sender, EventArgs e)
     {
-        wrap3.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Wrap3.png"));
+        wrap3.Image = MainForm.ResourceLoader.LoadImageFromResources("Wrap3.png");
     }
 
     private void wrap1_MouseDown(object sender, MouseEventArgs e)
@@ -158,22 +158,22 @@ public partial class Request1UserControl : UserControl
     
     private void saveButton_MouseEnter(object sender, EventArgs e)
     {
-        saveButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "SaveLight.png"));
+        saveButton.Image = MainForm.ResourceLoader.LoadImageFromResources("SaveLight.png");
     }
 
     private void saveButton_MouseLeave(object sender, EventArgs e)
     {
-        saveButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Save.png"));
+        saveButton.Image = MainForm.ResourceLoader.LoadImageFromResources("Save.png");
     }
     
     private void clearButton_MouseEnter(object sender, EventArgs e)
     {
-        clearButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "ClearLight.png"));
+        clearButton.Image = MainForm.ResourceLoader.LoadImageFromResources("ClearLight.png");
     }
 
     private void clearButton_MouseLeave(object sender, EventArgs e)
     {
-        clearButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Clear.png"));
+        clearButton.Image = MainForm.ResourceLoader.LoadImageFromResources("Clear.png");
     }
     
     private void clearButton_MouseDown(object sender, MouseEventArgs e)

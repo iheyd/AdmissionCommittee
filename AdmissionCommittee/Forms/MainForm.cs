@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,88 +18,106 @@ namespace AdmissionCommittee
         public MainForm()
         {
             InitializeComponent();
-            homeButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Home.png"));
-            requestButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Request.png"));
-            ratingButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating.png"));
-            requestButton1.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Request1.png"));
-            requestButton2.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Request2.png"));
-            ratingButton1.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating1.png"));
-            ratingButton2.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating2.png"));
-            ratingButton3.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating3.png"));
-            rebootButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Reboot.png"));
+            homeButton.Image = ResourceLoader.LoadImageFromResources("Home.png");
+            requestButton.Image = ResourceLoader.LoadImageFromResources("Request.png");
+            ratingButton.Image = ResourceLoader.LoadImageFromResources("Rating.png");
+            requestButton1.Image = ResourceLoader.LoadImageFromResources("Request1.png");
+            requestButton2.Image = ResourceLoader.LoadImageFromResources("Request2.png");
+            ratingButton1.Image = ResourceLoader.LoadImageFromResources("Rating1.png");
+            ratingButton2.Image = ResourceLoader.LoadImageFromResources("Rating2.png");
+            ratingButton3.Image = ResourceLoader.LoadImageFromResources("Rating3.png");
+            rebootButton.Image = ResourceLoader.LoadImageFromResources("Reboot.png");
             contentPanel.SendToBack();
+        }
+        public static class ResourceLoader
+        {
+            public static Image LoadImageFromResources(string imageName)
+            {
+                string namespaceName = "AdmissionCommittee.Images";
+                var assembly = Assembly.GetExecutingAssembly();
+
+                string fullResourceName = $"{namespaceName}.{imageName}";
+
+                using (Stream stream = assembly.GetManifestResourceStream(fullResourceName))
+                {
+                    if (stream == null)
+                        throw new FileNotFoundException("Изображение не найдено в ресурсах", fullResourceName);
+
+                    return Image.FromStream(stream);
+                }
+            }
         }
         private void requestButton_MouseEnter(object sender, EventArgs e)
         {
-            requestButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "RequestLight.png"));
+            requestButton.Image = ResourceLoader.LoadImageFromResources("RequestLight.png");
         }
         private void requestButton_MouseLeave(object sender, EventArgs e)
         {
-            requestButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Request.png"));
+            requestButton.Image = ResourceLoader.LoadImageFromResources("Request.png");
         }
         private void ratingButton_MouseEnter(object sender, EventArgs e)
         {
-            ratingButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "RatingLight.png"));
+            ratingButton.Image = ResourceLoader.LoadImageFromResources("RatingLight.png");
         }
         private void ratingButton_MouseLeave(object sender, EventArgs e)
         {
-            ratingButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating.png"));
+            ratingButton.Image = ResourceLoader.LoadImageFromResources("Rating.png");
         }
         private void homeButton_MouseEnter(object sender, EventArgs e)
         {
-            homeButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "HomeLight.png"));
+            homeButton.Image = ResourceLoader.LoadImageFromResources("HomeLight.png");
         }
         private void homeButton_MouseLeave(object sender, EventArgs e)
         {
-            homeButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Home.png"));
+            homeButton.Image = ResourceLoader.LoadImageFromResources("Home.png");
         }
         private void requestButton1_MouseEnter(object sender, EventArgs e)
         {
-            requestButton1.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Request1Light.png"));
+            requestButton1.Image = ResourceLoader.LoadImageFromResources("Request1Light.png");
         }
         private void requestButton1_MouseLeave(object sender, EventArgs e)
         {
-            requestButton1.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Request1.png"));
+            requestButton1.Image = ResourceLoader.LoadImageFromResources("Request1.png");
         }
         private void requestButton2_MouseEnter(object sender, EventArgs e)
         {
-            requestButton2.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Request2Light.png"));
+            requestButton2.Image = ResourceLoader.LoadImageFromResources("Request2Light.png");
         }
         private void requestButton2_MouseLeave(object sender, EventArgs e)
         {
-            requestButton2.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Request2.png"));
+            requestButton2.Image = ResourceLoader.LoadImageFromResources("Request2.png");
         }
         private void ratingButton1_MouseEnter(object sender, EventArgs e)
         {
-            ratingButton1.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating1Light.png"));
+            ratingButton1.Image = ResourceLoader.LoadImageFromResources("Rating1Light.png");
         }
         private void ratingButton1_MouseLeave(object sender, EventArgs e)
         {
-            ratingButton1.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating1.png"));
+            ratingButton1.Image = ResourceLoader.LoadImageFromResources("Rating1.png");
         }
         private void ratingButton2_MouseEnter(object sender, EventArgs e)
         {
-            ratingButton2.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating2Light.png"));
+            ratingButton2.Image = ResourceLoader.LoadImageFromResources("Rating2Light.png");
         }
         private void ratingButton2_MouseLeave(object sender, EventArgs e)
         {
-            ratingButton2.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating2.png"));
+            ratingButton2.Image = ResourceLoader.LoadImageFromResources("Rating2.png");
         }
         private void ratingButton3_MouseEnter(object sender, EventArgs e)
         {
-            ratingButton3.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating3Light.png"));
+            ratingButton3.Image = ResourceLoader.LoadImageFromResources("Rating3Light.png");
         }
         private void ratingButton3_MouseLeave(object sender, EventArgs e)
         {
-            ratingButton3.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Rating3.png"));
+            ratingButton3.Image = ResourceLoader.LoadImageFromResources("Rating3.png");
         }
         private void rebootButton_MouseEnter(object sender, EventArgs e)
         {
-            rebootButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "RebootLight.png"));
+            rebootButton.Image = ResourceLoader.LoadImageFromResources("RebootLight.png");
         }
         private void rebootButton_MouseLeave(object sender, EventArgs e)
         {
-            rebootButton.Image = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images", "Reboot.png"));
+            rebootButton.Image = ResourceLoader.LoadImageFromResources("Reboot.png");
         }
         private void homeButton_MouseDown(object sender, MouseEventArgs e)
         {

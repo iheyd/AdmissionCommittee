@@ -40,7 +40,7 @@ partial class Rating2UserControl
         this.dataGridViewRating2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
         this.dataGridViewRating2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         this.dataGridViewRating2.GridColor = System.Drawing.SystemColors.Control;
-        this.dataGridViewRating2.Location = new System.Drawing.Point(8, 8);
+        this.dataGridViewRating2.Location = new System.Drawing.Point(0, 0);
         this.dataGridViewRating2.Name = "dataGridViewRating2";
         this.dataGridViewRating2.Size = new System.Drawing.Size(1264, 596);
         this.dataGridViewRating2.TabIndex = 2;

@@ -278,24 +278,18 @@
             this.ratingPanel.ResumeLayout(false);
             this.ResumeLayout(false);
         }
-
         private System.Windows.Forms.Button rebootButton;
-
         private System.Windows.Forms.Panel contentPanel;
-
         private System.Windows.Forms.Button ratingButton1;
         private System.Windows.Forms.Button ratingButton2;
         private System.Windows.Forms.Button ratingButton3;
-
         private System.Windows.Forms.Button requestButton1;
         private System.Windows.Forms.Button requestButton2;
-
         private System.Windows.Forms.Panel ratingPanel;
         private System.Windows.Forms.Panel requestPanel;
         private System.Windows.Forms.Button requestButton;
         private System.Windows.Forms.Button ratingButton;
         private System.Windows.Forms.Button homeButton;
-
         #endregion
     }
 }

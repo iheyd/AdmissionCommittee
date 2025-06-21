@@ -40,7 +40,7 @@ partial class Rating3UserControl
         this.dataGridViewRating3.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
         this.dataGridViewRating3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         this.dataGridViewRating3.GridColor = System.Drawing.SystemColors.Control;
-        this.dataGridViewRating3.Location = new System.Drawing.Point(8, 8);
+        this.dataGridViewRating3.Location = new System.Drawing.Point(0, 0);
         this.dataGridViewRating3.Name = "dataGridViewRating3";
         this.dataGridViewRating3.Size = new System.Drawing.Size(1264, 596);
         this.dataGridViewRating3.TabIndex = 2;
