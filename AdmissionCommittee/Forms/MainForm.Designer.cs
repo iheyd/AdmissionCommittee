@@ -37,10 +37,11 @@
             this.requestButton2 = new System.Windows.Forms.Button();
             this.requestButton1 = new System.Windows.Forms.Button();
             this.ratingPanel = new System.Windows.Forms.Panel();
-            this.ratingButton1 = new System.Windows.Forms.Button();
             this.ratingButton3 = new System.Windows.Forms.Button();
             this.ratingButton2 = new System.Windows.Forms.Button();
-            this.homeUserControl = new AdmissionCommittee.Views.HomeUserControl();
+            this.ratingButton1 = new System.Windows.Forms.Button();
+            this.contentPanel = new System.Windows.Forms.Panel();
+            this.rebootButton = new System.Windows.Forms.Button();
             this.requestPanel.SuspendLayout();
             this.ratingPanel.SuspendLayout();
             this.SuspendLayout();
@@ -123,10 +124,10 @@
             this.requestButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.requestButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.requestButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.requestButton2.Location = new System.Drawing.Point(0, 0);
+            this.requestButton2.Location = new System.Drawing.Point(0, 36);
             this.requestButton2.Name = "requestButton2";
             this.requestButton2.Size = new System.Drawing.Size(256, 36);
-            this.requestButton2.TabIndex = 5;
+            this.requestButton2.TabIndex = 10;
             this.requestButton2.UseVisualStyleBackColor = true;
             this.requestButton2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.requestButton2_MouseDown);
             this.requestButton2.MouseEnter += new System.EventHandler(this.requestButton2_MouseEnter);
@@ -142,10 +143,10 @@
             this.requestButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.requestButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.requestButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.requestButton1.Location = new System.Drawing.Point(0, 36);
+            this.requestButton1.Location = new System.Drawing.Point(0, 0);
             this.requestButton1.Name = "requestButton1";
             this.requestButton1.Size = new System.Drawing.Size(256, 36);
-            this.requestButton1.TabIndex = 6;
+            this.requestButton1.TabIndex = 9;
             this.requestButton1.UseVisualStyleBackColor = true;
             this.requestButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.requestButton1_MouseDown);
             this.requestButton1.MouseEnter += new System.EventHandler(this.requestButton1_MouseEnter);
@@ -155,34 +156,15 @@
             // ratingPanel
             // 
             this.ratingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(86)))), ((int)(((byte)(4)))));
-            this.ratingPanel.Controls.Add(this.ratingButton1);
             this.ratingPanel.Controls.Add(this.ratingButton3);
             this.ratingPanel.Controls.Add(this.ratingButton2);
+            this.ratingPanel.Controls.Add(this.ratingButton1);
             this.ratingPanel.Location = new System.Drawing.Point(512, 66);
             this.ratingPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ratingPanel.Name = "ratingPanel";
             this.ratingPanel.Size = new System.Drawing.Size(256, 108);
             this.ratingPanel.TabIndex = 7;
             this.ratingPanel.Visible = false;
-            // 
-            // ratingButton1
-            // 
-            this.ratingButton1.BackColor = System.Drawing.Color.Transparent;
-            this.ratingButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ratingButton1.BackgroundImage")));
-            this.ratingButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ratingButton1.FlatAppearance.BorderSize = 0;
-            this.ratingButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ratingButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ratingButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ratingButton1.Location = new System.Drawing.Point(0, 0);
-            this.ratingButton1.Name = "ratingButton1";
-            this.ratingButton1.Size = new System.Drawing.Size(256, 36);
-            this.ratingButton1.TabIndex = 6;
-            this.ratingButton1.UseVisualStyleBackColor = true;
-            this.ratingButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ratingButton1_MouseDown);
-            this.ratingButton1.MouseEnter += new System.EventHandler(this.ratingButton1_MouseEnter);
-            this.ratingButton1.MouseLeave += new System.EventHandler(this.ratingButton1_MouseLeave);
-            this.ratingButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ratingButton1_MouseUp);
             // 
             // ratingButton3
             // 
@@ -196,7 +178,7 @@
             this.ratingButton3.Location = new System.Drawing.Point(0, 72);
             this.ratingButton3.Name = "ratingButton3";
             this.ratingButton3.Size = new System.Drawing.Size(256, 36);
-            this.ratingButton3.TabIndex = 7;
+            this.ratingButton3.TabIndex = 12;
             this.ratingButton3.UseVisualStyleBackColor = true;
             this.ratingButton3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ratingButton3_MouseDown);
             this.ratingButton3.MouseEnter += new System.EventHandler(this.ratingButton3_MouseEnter);
@@ -215,21 +197,57 @@
             this.ratingButton2.Location = new System.Drawing.Point(0, 36);
             this.ratingButton2.Name = "ratingButton2";
             this.ratingButton2.Size = new System.Drawing.Size(256, 36);
-            this.ratingButton2.TabIndex = 5;
+            this.ratingButton2.TabIndex = 10;
             this.ratingButton2.UseVisualStyleBackColor = true;
             this.ratingButton2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ratingButton2_MouseDown);
             this.ratingButton2.MouseEnter += new System.EventHandler(this.ratingButton2_MouseEnter);
             this.ratingButton2.MouseLeave += new System.EventHandler(this.ratingButton2_MouseLeave);
             this.ratingButton2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ratingButton2_MouseUp);
             // 
-            // homeUserControl
+            // ratingButton1
             // 
-            this.homeUserControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homeUserControl.BackgroundImage")));
-            this.homeUserControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homeUserControl.Location = new System.Drawing.Point(0, 66);
-            this.homeUserControl.Name = "homeUserControl";
-            this.homeUserControl.Size = new System.Drawing.Size(1264, 596);
-            this.homeUserControl.TabIndex = 8;
+            this.ratingButton1.BackColor = System.Drawing.Color.Transparent;
+            this.ratingButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ratingButton1.BackgroundImage")));
+            this.ratingButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ratingButton1.FlatAppearance.BorderSize = 0;
+            this.ratingButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ratingButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ratingButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ratingButton1.Location = new System.Drawing.Point(0, 0);
+            this.ratingButton1.Name = "ratingButton1";
+            this.ratingButton1.Size = new System.Drawing.Size(256, 36);
+            this.ratingButton1.TabIndex = 11;
+            this.ratingButton1.UseVisualStyleBackColor = true;
+            this.ratingButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ratingButton1_MouseDown);
+            this.ratingButton1.MouseEnter += new System.EventHandler(this.ratingButton1_MouseEnter);
+            this.ratingButton1.MouseLeave += new System.EventHandler(this.ratingButton1_MouseLeave);
+            this.ratingButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ratingButton1_MouseUp);
+            // 
+            // contentPanel
+            // 
+            this.contentPanel.Location = new System.Drawing.Point(0, 66);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(1264, 596);
+            this.contentPanel.TabIndex = 8;
+            // 
+            // rebootButton
+            // 
+            this.rebootButton.BackColor = System.Drawing.Color.Transparent;
+            this.rebootButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rebootButton.BackgroundImage")));
+            this.rebootButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rebootButton.FlatAppearance.BorderSize = 0;
+            this.rebootButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.rebootButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.rebootButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rebootButton.Location = new System.Drawing.Point(1198, 0);
+            this.rebootButton.Name = "rebootButton";
+            this.rebootButton.Size = new System.Drawing.Size(66, 66);
+            this.rebootButton.TabIndex = 9;
+            this.rebootButton.UseVisualStyleBackColor = true;
+            this.rebootButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rebootButton_MouseDown);
+            this.rebootButton.MouseEnter += new System.EventHandler(this.rebootButton_MouseEnter);
+            this.rebootButton.MouseLeave += new System.EventHandler(this.rebootButton_MouseLeave);
+            this.rebootButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rebootButton_MouseUp);
             // 
             // MainForm
             // 
@@ -239,7 +257,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.homeUserControl);
+            this.Controls.Add(this.rebootButton);
+            this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.ratingPanel);
             this.Controls.Add(this.requestPanel);
             this.Controls.Add(this.ratingButton);
@@ -253,21 +272,25 @@
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Система управления";
+            this.Text = "Приемная комиссия";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.requestPanel.ResumeLayout(false);
             this.ratingPanel.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
-        private AdmissionCommittee.Views.HomeUserControl homeUserControl;
+        private System.Windows.Forms.Button rebootButton;
 
-        private System.Windows.Forms.Panel ratingPanel;
+        private System.Windows.Forms.Panel contentPanel;
+
         private System.Windows.Forms.Button ratingButton1;
         private System.Windows.Forms.Button ratingButton2;
         private System.Windows.Forms.Button ratingButton3;
-        private System.Windows.Forms.Button requestButton2;
+
         private System.Windows.Forms.Button requestButton1;
+        private System.Windows.Forms.Button requestButton2;
+
+        private System.Windows.Forms.Panel ratingPanel;
         private System.Windows.Forms.Panel requestPanel;
         private System.Windows.Forms.Button requestButton;
         private System.Windows.Forms.Button ratingButton;

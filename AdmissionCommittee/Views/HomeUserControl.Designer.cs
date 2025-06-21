@@ -32,22 +32,20 @@ partial class HomeUserControl
     private void InitializeComponent()
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeUserControl));
-        this.label1 = new System.Windows.Forms.Label();
+        this.total_applications = new System.Windows.Forms.Label();
         this.label4 = new System.Windows.Forms.Label();
-        this.label2 = new System.Windows.Forms.Label();
-        this.label3 = new System.Windows.Forms.Label();
+        this.requests = new System.Windows.Forms.Label();
         this.SuspendLayout();
         // 
-        // label1
+        // total_applications
         // 
-        this.label1.BackColor = System.Drawing.Color.Transparent;
-        this.label1.Font = new System.Drawing.Font("Montserrat Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-        this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-        this.label1.Location = new System.Drawing.Point(519, 219);
-        this.label1.Name = "label1";
-        this.label1.Size = new System.Drawing.Size(384, 36);
-        this.label1.TabIndex = 0;
-        this.label1.Text = "123";
+        this.total_applications.BackColor = System.Drawing.Color.Transparent;
+        this.total_applications.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+        this.total_applications.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+        this.total_applications.Location = new System.Drawing.Point(519, 219);
+        this.total_applications.Name = "total_applications";
+        this.total_applications.Size = new System.Drawing.Size(384, 36);
+        this.total_applications.TabIndex = 0;
         // 
         // label4
         // 
@@ -60,39 +58,28 @@ partial class HomeUserControl
         this.label4.Text = "Welcome";
         this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
-        // label2
+        // requests
         // 
-        this.label2.BackColor = System.Drawing.Color.Transparent;
-        this.label2.Font = new System.Drawing.Font("Montserrat Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-        this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-        this.label2.Location = new System.Drawing.Point(497, 271);
-        this.label2.Name = "label2";
-        this.label2.Size = new System.Drawing.Size(406, 36);
-        this.label2.TabIndex = 4;
-        this.label2.Text = "123";
-        // 
-        // label3
-        // 
-        this.label3.BackColor = System.Drawing.Color.Transparent;
-        this.label3.Font = new System.Drawing.Font("Montserrat Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-        this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-        this.label3.Location = new System.Drawing.Point(519, 324);
-        this.label3.Name = "label3";
-        this.label3.Size = new System.Drawing.Size(384, 36);
-        this.label3.TabIndex = 5;
-        this.label3.Text = "123";
+        this.requests.BackColor = System.Drawing.Color.Transparent;
+        this.requests.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+        this.requests.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+        this.requests.Location = new System.Drawing.Point(497, 271);
+        this.requests.Name = "requests";
+        this.requests.Size = new System.Drawing.Size(406, 36);
+        this.requests.TabIndex = 4;
         // 
         // HomeUserControl
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        this.BackColor = System.Drawing.SystemColors.Control;
         this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
         this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-        this.Controls.Add(this.label3);
-        this.Controls.Add(this.label2);
+        this.Controls.Add(this.requests);
         this.Controls.Add(this.label4);
-        this.Controls.Add(this.label1);
+        this.Controls.Add(this.total_applications);
         this.DoubleBuffered = true;
+        this.Location = new System.Drawing.Point(15, 15);
         this.Name = "HomeUserControl";
         this.Size = new System.Drawing.Size(1264, 596);
         this.ResumeLayout(false);
@@ -100,10 +87,9 @@ partial class HomeUserControl
 
     private System.Windows.Forms.Label label4;
 
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Label requests;
 
-    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Label total_applications;
 
     #endregion
 }
